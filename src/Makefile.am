@@ -1,6 +1,7 @@
 helloworlddir=$(pkglibdir)
-helloworld_SCRIPTS = helloworld.exe
-EXTRA_DIST = $(helloworld_sources) $(helloworld_sources_in)
+helloworld_SCRIPTS = helloworld.exe helloworldform.exe
+EXTRA_DIST = $(helloworld_sources) $(helloworld_sources_in) $(helloworldform_sources) $(helloworldform_sources_in)
+
 CLEANFILES = helloworld.exe helloworldform.exe
 
 helloworld_sources_in = AssemblyInfo.cs.in
