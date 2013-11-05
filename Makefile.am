@@ -1,5 +1,5 @@
 SUBDIRS = man resources src
-bin_SCRIPTS = helloworld
+bin_SCRIPTS = helloworld helloworldform
 EXTRA_DIST = script.in
 
 REWRITE = \
