@@ -1,2 +1,2 @@
 #!/bin/sh
-exec @MONO@ @prefix@/lib/helloworld/helloworld.exe $MONO_EXTRA_ARGS "$@"
+exec @MONO@ @prefix@/lib/helloworld/@APP@.exe $MONO_EXTRA_ARGS "$@"
