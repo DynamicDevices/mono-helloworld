@@ -1,0 +1,15 @@
+//
+// AssemblyInfo.cs.in for project 'helloworld'  
+//
+// Authors:
+//	Alex J Lennon (ajlennon@dynamicdevices.co.uk)
+//
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: AssemblyVersion("@VERSION@")]
+[assembly: AssemblyTitle ("Helloworld")]
+[assembly: AssemblyDescription ("Hello world executables for Mono console and windows forms testing")]
+[assembly: AssemblyCopyright ("Copyright (c) 2013 Dynamic Devices Ltd")]
+[assembly: AssemblyCompany ("Dynamic Devices Ltd")]
+
