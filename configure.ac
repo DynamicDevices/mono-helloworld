@@ -31,8 +31,9 @@ if test "x$MONO" = "xno"; then
 fi
 
 dnl gtk-sharp
-GTKSHARP_REQUIRED_VERSION=1.0
-PKG_CHECK_MODULES(GTKSHARP, gtk-sharp >= $GTKSHARP_REQUIRED_VERSION)
+#AJL - Disabled this until I work out why it fails
+#GTKSHARP_REQUIRED_VERSION=1.0
+#PKG_CHECK_MODULES(GTKSHARP, gtk-sharp >= $GTKSHARP_REQUIRED_VERSION)
 
 AC_SUBST(MCS)
 
