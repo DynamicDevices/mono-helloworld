@@ -1,3 +1,3 @@
-man_MANS = monoskel.1
-EXTRA_DIST = monoskel.1
+man_MANS = helloworld.1
+EXTRA_DIST = helloworld.1
 
