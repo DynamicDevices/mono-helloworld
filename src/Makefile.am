@@ -23,6 +23,8 @@ embedded= $(foreach res,$(resources), $(addprefix -resource:,$(res)),$(notdir $(
 
 helloworld.exe: $(helloworld_build_sources) $(resources)
 	$(MCS) $(GTKSHARP_LIBS) $(embedded) -out:$@ $< 
+
+helloworld.exe: $(helloworldform_build_sources) $(resources)
 	$(MCS) $(GTKSHARP_LIBS) $(embedded) -out:$@ $< 
 
 
