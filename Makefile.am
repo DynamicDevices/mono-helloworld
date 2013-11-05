@@ -7,7 +7,7 @@ REWRITE = \
             -e "s|\@pkglibdir\@|$(pkglibdir)|g"         \
             -e "s|\@bindir\@|$(bindir)|g"		\
 	    -e "s|\@MONO\@|$(MONO)|g"                   \
-	    -e "s|\@APP\@|$(bin_SCRIPTS)|g"                   
+	    -e "s|\@APP\@|$@|g"                   
 
 $(bin_SCRIPTS): $(srcdir)/script.in Makefile
 	$(REWRITE) $(srcdir)/script.in > $@.tmp
