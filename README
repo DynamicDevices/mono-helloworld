@@ -2,3 +2,6 @@ mono-helloworld
 ===============
 
 Simple Mono test application for console/windows forms
+
+20/04/2014	Added Visual Studio 2010 solution to show how code can be built under Visual Studio on Windows platforms,
+		then built with a Yocto / OpenEmbedded recipe using xbuild
