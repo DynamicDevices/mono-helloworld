@@ -1,5 +1,14 @@
 SUBDIRS = man resources src
-bin_SCRIPTS = helloworld helloworldform
+bin_SCRIPTS = helloworld
+
+if BUILD_WINFORMDEMO
+bin_SCRIPTS += helloworldform 
+endif
+
+if BUILD_GTKDEMO
+bin_SCRIPTS += helloworldgtk
+endif
+
 EXTRA_DIST = script.in
 
 REWRITE = \

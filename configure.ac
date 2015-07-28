@@ -1,7 +1,6 @@
-AC_INIT(README)
-AC_CANONICAL_SYSTEM
-AM_INIT_AUTOMAKE(helloworld, 0.1)
-AM_MAINTAINER_MODE
+AC_INIT(helloworld,0.1)
+AC_CONFIG_SRCDIR(README)
+AM_INIT_AUTOMAKE
 
 AC_PROG_INSTALL
 
@@ -30,10 +29,25 @@ if test "x$MONO" = "xno"; then
 	AC_MSG_ERROR([No mono runtime found])
 fi
 
-dnl gtk-sharp
-#AJL - Disabled this until I work out why it fails
-#GTKSHARP_REQUIRED_VERSION=1.0
-#PKG_CHECK_MODULES(GTKSHARP, gtk-sharp >= $GTKSHARP_REQUIRED_VERSION)
+AC_ARG_ENABLE([winformdemo],
+[  --enable-winformdemo    Build winform demo],
+[case "${enableval}" in
+  yes) winformdemo=true ;;
+  no)  winformdemo=false ;;
+  *) AC_MSG_ERROR([bad value ${enableval} for --enable-winformdemo]) ;;
+esac],[winformdemo=false])
+AM_CONDITIONAL([BUILD_WINFORMDEMO], [test x$winformdemo = xtrue])
+
+AC_ARG_ENABLE([gtkdemo],
+[  --enable-gtkdemo    Build gtkdemo],
+[case "${enableval}" in
+  yes) gtkdemo=true ;;
+  no)  gtkdemo=false ;;
+  *) AC_MSG_ERROR([bad value ${enableval} for --enable-gtkdemo]) ;;
+esac],[gtkdemo=false])
+AM_CONDITIONAL([BUILD_GTKDEMO], [test x$gtkdemo = xtrue])
+
+AC_SUBST(GTKSHARP_LIBS)
 
 AC_SUBST(MCS)
 
