@@ -47,5 +47,5 @@ helloworldform.exe: $(helloworldform_build_sources) $(resources)
 	$(MCS) -r:System.Windows.Forms -r:System.Data -r:System.Drawing  $(embedded) -out:$@ $< 
 
 helloworldgtk.exe: $(helloworldgtk_build_sources) $(resources)
-	$(MCS) $(GTKSHARP_LIBS) -pkg:gtk-sharp-2.0 -r:System.Windows.Forms -r:System.Data -r:System.Drawing  $(embedded) -out:$@ $< 
+	$(MCS) $(GTKSHARP_LIBS) -pkg:gtk-sharp-3.0 -r:System.Windows.Forms -r:System.Data -r:System.Drawing  $(embedded) -out:$@ $< 
 
